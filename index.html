@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çiçek bahçesi - Mobil Çiçekçi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF; /* Gri arka plan */
+            color: black;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+            margin: 5px 0 0;
+        }
+
+        .flower-garden {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        #selected-city {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .menu {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menu-bar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #f2f2f2;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        .menu-bar ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .menu-bar ul li {
+            margin: 10px 0;
+        }
+
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: black; /* Link rengi siyah */
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back-button {
+            display: block;
+            padding: 10px;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .gallery p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #000;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Mobilde (600px altı ekranlar için) fotoğraflar alt alta görünsün */
+        @media (max-width: 600px) {
+            .gallery {
+                display: block; /* Flex yerine blok düzen */
+            }
+
+            .gallery-item {
+                margin-bottom: 20px;
+            }
+
+            .gallery img {
+                width: 100%; /* Görsel genişliği tam ekran */
+                height: auto; /* Yükseklik oranını korur */
+            }
+    </style>
+</head>
+<body>
+
+    <div class="menu" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="menu-bar" id="menuBar">
+        <a href="#" class="back-button" onclick="toggleMenu()">← Geri Dön</a>
+        <ul>
+            <script>
+                const cities = [
+                    'Adana', //bir değişken girdinde 3 çizginin içine yazar
+                ];
+                document.write(cities.map(city => `<li><a href="#" onclick="selectCity('${city}')">${city}</a></li>`).join(''));
+            </script>
+        </ul>
+    </div>
+
+    <header>
+        <div class="flower-garden">baslık</div>
+        <div id="selected-city"></div>
+        <h1>text3</h1>
+          <title>text2<br>text</title>
+    <style>
+        .transparent-text {
+            font-size: 24px;
+            color: black; /* Yazı rengi siyah */
+            opacity: 0.5; /* %50 şeffaf */
+        }
+    </style>
+</head>
+<body>
+    <p class="transparent-text">buraya yazmak için yazın </p>
+       
+    </header>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="1.png" alt="Çiçek 1" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        <div class="gallery-item">
+            <img src="2.png" alt="Çiçek 2" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        <div class="gallery-item">
+            <img src="3.png" alt="Çiçek 3" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        <div class="gallery-item">
+            <img src="4.png" alt="Çiçek 4" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        <div class="gallery-item">
+            <img src="5.png" alt="Çiçek 5" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        <div class="gallery-item">
+            <img src="6.png" alt="Çiçek 6" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        <div class="gallery-item">
+            <img src="7.png" alt="Çiçek 7" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        <div class="gallery-item">
+            <img src="8.png" alt="Çiçek 8" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="9.png" alt="Çiçek 9" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="10.png" alt="Çiçek 10" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="11.png" alt="Çiçek 11" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+ 
+        <div class="gallery-item">
+            <img src="12.png" alt="Çiçek 12" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+ 
+        <div class="gallery-item">
+            <img src="13.png" alt="Çiçek 13" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+ 
+        <div class="gallery-item">
+            <img src="14s.png" alt="Çiçek 14" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+ 
+        <div class="gallery-item">
+            <img src="15.png" alt="Çiçek 15" onclick="sendWhatsApp('benimle')">
+            <p>benimle</p>
+        </div>
+    
+  <div class="gallery-item">
+            <img src="16.png" alt="Çiçek 8" onclick="sendWhatsApp('benimle')">
+            <p>benimle </p>
+        </div>
+ 
+  <div class="gallery-item">
+            <img src="17.png" alt="Çiçek 8" onclick="sendWhatsApp('benimle')">
+            <p>güzel</p>
+        </div>
+ 
+
+    </div>
+
+
+      <footer>
+    Copyright © 2024 - 2025 tüm haklar saklıdır
+    <br>
+    <a href="gizlilik.html" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">Gizlilik Politikası</a>
+    <a href="gizlilik.html" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">KVKK Metni</a>
+    <a href="gizlilik.html" target="_blank" style="color: white; text-decoration: none;">İade Politikası</a>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            const menuBar = document.getElementById('menuBar');
+            menuBar.style.display = menuBar.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function selectCity(city) {
+            document.getElementById('selected-city').innerText = `Seçilen Şehir: ${city}`;
+            toggleMenu();
+        }
+
+        function sendWhatsApp(message) {
+            const phoneNumber = '905516457661'; // WhatsApp numarası buraya girilecek
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
+
